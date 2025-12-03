@@ -145,7 +145,7 @@ export default function ExcelsiorAIWebsite() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <Bot className={`w-8 h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                <img src="/logo.svg"alt="Excelsior AI Logo" className="w-10 h-10 object-contain"/>
               <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Excelsior AI</span>
             </div>
 
