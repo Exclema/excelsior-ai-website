@@ -150,7 +150,7 @@ export default function ExcelsiorAIWebsite() {
                  alt="Excelsior AI Logo"
                  className='w-25 h-25 object-countain'
               />
-              <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Excelsior AI</span>
+              <span className={`text-xl font-bold font-oxanium ${darkMode ? 'text-white' : 'text-slate-900'}`}>Excelsior AI</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -229,7 +229,7 @@ export default function ExcelsiorAIWebsite() {
         darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900' : 'bg-gradient-to-br from-blue-50 to-slate-100'
       }`}>
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className={`text-5xl md:text-6xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+          <h1 className={`text-5xl md:text-6xl font-bold mb-6 font-oxanium ${darkMode ? 'text-white' : 'text-slate-900'}`}>
             Excelsior AI Solutions
           </h1>
           <p className={`text-xl md:text-3xl font-semibold mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>
