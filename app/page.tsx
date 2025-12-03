@@ -55,20 +55,21 @@ export default function ExcelsiorAIWebsite() {
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  };
 
   // Handle form input changes
-  const handleInputChange = (e: React.FormEvent) =>{
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setFormStatus({ type: '', message: '' });
   };
 
   // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) =>{
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus({ type: '', message: '' });
@@ -327,7 +328,7 @@ export default function ExcelsiorAIWebsite() {
 
           {/* Contact Cards */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className={`p-6 rounded-xl text-center ${darkMode ? 'bg-slate-700' : 'bg-slate-800'}`}>
+            <div className="p-6 rounded-xl text-center bg-slate-800">
               <Mail className="w-8 h-8 text-blue-400 mx-auto mb-3" />
               <h3 className="text-white font-semibold mb-2">Email</h3>
               <a href="mailto:contact@excelsior-ai.com" className="text-blue-400 hover:text-blue-300 text-sm break-all">
@@ -335,7 +336,7 @@ export default function ExcelsiorAIWebsite() {
               </a>
             </div>
 
-            <div className={`p-6 rounded-xl text-center ${darkMode ? 'bg-slate-700' : 'bg-slate-800'}`}>
+            <div className="p-6 rounded-xl text-center bg-slate-800">
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
               <h3 className="text-white font-semibold mb-2">WhatsApp</h3>
               <a href="https://wa.me/1234567890" className="text-blue-400 hover:text-blue-300 text-sm">
@@ -343,7 +344,7 @@ export default function ExcelsiorAIWebsite() {
               </a>
             </div>
 
-            <div className={`p-6 rounded-xl text-center ${darkMode ? 'bg-slate-700' : 'bg-slate-800'}`}>
+            <div className="p-6 rounded-xl text-center bg-slate-800">
               <Globe className="w-8 h-8 text-blue-400 mx-auto mb-3" />
               <h3 className="text-white font-semibold mb-2">Services</h3>
               <p className="text-slate-300 text-sm">Remote | Global</p>
@@ -351,7 +352,7 @@ export default function ExcelsiorAIWebsite() {
           </div>
 
           {/* Contact Form */}
-          <div className={`p-8 rounded-xl shadow-xl ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>
+          <form onSubmit={handleSubmit} className={`p-8 rounded-xl shadow-xl ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>
             <h3 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
               Send us a message
             </h3>
@@ -433,7 +434,7 @@ export default function ExcelsiorAIWebsite() {
 
               {/* Submit Button */}
               <button
-                onClick={handleSubmit}
+                type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:bg-slate-400 disabled:cursor-not-allowed flex items-center justify-center"
               >
@@ -447,7 +448,7 @@ export default function ExcelsiorAIWebsite() {
                 )}
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
 
