@@ -145,7 +145,11 @@ export default function ExcelsiorAIWebsite() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-                <img src="/logo.png"alt="Excelsior AI Logo" className="w-10 h-10 object-contain"/>
+                <img 
+                  src="/logo.png"
+                  alt="Excelsior AI Logo" 
+                  className="w-10 h-10 object-contain"
+                />
               <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Excelsior AI</span>
             </div>
 
