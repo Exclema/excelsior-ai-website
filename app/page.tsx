@@ -54,22 +54,21 @@ export default function ExcelsiorAIWebsite() {
   };
 
   // Smooth scroll to section
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
-    }
-  };
+  const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
   // Handle form input changes
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.FormEvent) =>{
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setFormStatus({ type: '', message: '' });
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) =>{
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus({ type: '', message: '' });
