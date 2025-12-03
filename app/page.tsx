@@ -54,7 +54,7 @@ export default function ExcelsiorAIWebsite() {
   };
 
   // Smooth scroll to section
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
