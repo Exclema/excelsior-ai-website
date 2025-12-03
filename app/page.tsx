@@ -146,7 +146,7 @@ export default function ExcelsiorAIWebsite() {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <img
-                src="/logo.svg"
+                src="/ExcelsiorAILogo.svg"
                  alt="Excelsior AI Logo"
                  className='w-10 h-10 object-countain'
               />
