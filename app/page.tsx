@@ -438,7 +438,7 @@ export default function ExcelsiorAIWebsite() {
                 disabled={isSubmitting}
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:bg-slate-400 disabled:cursor-not-allowed flex items-center justify-center"
               >
-                {isSubmitting ? (
+                {isSubmitting? (
                   'Sending...'
                 ) : (
                   <>
