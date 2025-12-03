@@ -232,7 +232,7 @@ export default function ExcelsiorAIWebsite() {
           <h1 className={`text-5xl md:text-6xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
             Excelsior AI Solutions
           </h1>
-          <p className={`text-2xl md:text-3xl font-semibold mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+          <p className={`text-xl md:text-3xl font-semibold mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>
             Smarter Solutions. Stronger Business.
           </p>
           <p className={`text-lg md:text-xl max-w-3xl mx-auto mb-8 ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
