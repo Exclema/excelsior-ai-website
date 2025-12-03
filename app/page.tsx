@@ -148,7 +148,7 @@ export default function ExcelsiorAIWebsite() {
               <img
                 src="/ExcelsiorAILogo.png"
                  alt="Excelsior AI Logo"
-                 className='w-38 h-38 object-countain'
+                 className='w-30 h-30 object-countain'
               />
               <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>Excelsior AI</span>
             </div>
